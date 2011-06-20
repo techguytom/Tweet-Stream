@@ -1,9 +1,9 @@
 === Plugin Name ===
 Contributors: techguytom
-Tags: twitter, display tweets, mentions, 
+Tags: twitter, display tweets, mentions,
 Requires at least: 2.9
 Tested up to: 3.0
-Stable tag: 1.0
+Stable tag: 1.1
 
 Display your most recent tweets and mentions in a sidebar or widget enabled area.
 
@@ -29,6 +29,9 @@ Absolutely.  CSS classes have been added to each element so you may style the pl
 2. The user facing display with all options chosen and default css.
 
 == Changelog ==
+
+= 1.1 =
+Set internal cache to be dynamic so multiple widgets can be displayed
 
 = 1.0 =
 Clear internal cache whenever the widgets configuration is updated.
