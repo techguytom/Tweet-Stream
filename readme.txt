@@ -3,7 +3,7 @@ Contributors: techguytom
 Tags: twitter, display tweets, mentions,
 Requires at least: 2.9
 Tested up to: 3.0
-Stable tag: 1.1
+Stable tag: 1.2
 
 Display your most recent tweets and mentions in a sidebar or widget enabled area.
 
@@ -15,7 +15,45 @@ This plugin adds a widget to Wordpress that will display a users tweets as well 
 
 1. Upload the 'tweet_stream' directory to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Go to 'Appearance' -> 'Widgets' to add and configure Tweet Stream to your Widget enabled areas.
+
+= Widget Use =
+1. Go to 'Appearance' -> 'Widgets' to add and configure Tweet Stream to your Widget enabled areas.
+
+= Template Tag Use =
+You can display your tweets and/or mentions anywhere within your theme now through the use of the new template tag.
+Place the following code anywhere you would like your tweets displayed:
+<?php $args = array(
+    'username'          => 'techguytom',
+    'tweets_number'     => 4,
+    'links'             => true,
+    'images'            => true,
+    'mentions'          => false,
+    'mentions_number'   => 0,
+    'cache'             => false
+    );?>
+<?php tgt_get_tweets($args);?>
+
+= Parameters =
+username
+The username of the person to display the tweets for
+
+tweets_number
+The number of tweets to display
+
+links
+Switch to determine whether links in tweets should be clickable
+
+images
+Switch to determine if the twitter avatar should be displayed with each tweet
+
+mentions
+Switch to determine if mentions of the user should be displayed
+
+mentions_number
+The number of mentions to display
+
+cache
+Determines whether you want to cache the result for 5 minutes to prevent twitter rate limiting. This is a recommended setting if you have a high traffic site.
 
 == Frequently Asked Questions ==
 
@@ -29,6 +67,9 @@ Absolutely.  CSS classes have been added to each element so you may style the pl
 2. The user facing display with all options chosen and default css.
 
 == Changelog ==
+
+= 1.2 =
+Add template tag tgt_get_tweets() so the plugin is no longer dependent on a widget area
 
 = 1.1 =
 Set internal cache to be dynamic so multiple widgets can be displayed
