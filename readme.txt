@@ -70,6 +70,7 @@ Absolutely.  CSS classes have been added to each element so you may style the pl
 
 = 1.2 =
 Add template tag tgt_get_tweets() so the plugin is no longer dependent on a widget area
+fixed typo in translation text domain - props: mike
 
 = 1.1 =
 Set internal cache to be dynamic so multiple widgets can be displayed
