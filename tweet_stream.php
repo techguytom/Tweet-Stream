@@ -196,7 +196,7 @@ class tgt_tweet_stream_Widget extends WP_Widget
         }
         echo ' /></label><input type="text" name=' . $this->get_field_name('header_text') . ' value="' . $header_text . '" /></p>';
 
-        echo '<p><label for="' . $this->get_field_id('display_number') . '">' . __("How many of your latest tweets would you like displayed?", "tgt_tweet_streem") . '</label>';
+        echo '<p><label for="' . $this->get_field_id('display_number') . '">' . __("How many of your latest tweets would you like displayed?", "tgt_tweet_stream") . '</label>';
         echo '<select class="widefat" id="' . $this->get_field_id('display_number') . '" name="' . $this->get_field_name('display_number') . '">';
         echo '<option value="' . $display_number . '">' . $display_number . '</option>';
         echo '<option value="1">1</option>';
